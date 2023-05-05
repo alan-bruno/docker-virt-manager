@@ -1,4 +1,5 @@
 services: 
+  container_name: virt-manager
   virt-manager:
     image: mber5/virt-manager:latest
     restart: always
@@ -6,23 +7,10 @@ services:
       - 8185:80
 
     environment:
-    # Set DARK_MODE to true to enable dark mode
-      DARK_MODE: false 
-    # If connecting to remote libvirtd, you can use a qemu+ssh string like below. Default qemu:///system will connect to local libvirtd: 
-    # HOSTS: "['qemu+ssh://user@host1/system', 'qemu+ssh://user@host2/system']"
-      HOSTS: "['qemu:///system']"
-
-    # If on an Ubuntu host (or any host with the libvirt AppArmor policy, you will need to use an ssh connection to localhost
-    # or use qemu:///system and uncomment the below line to run the container in privileged mode: 
-    # privileged: true
+      HOSTS: "[]"
+      DOMINIO: ""
+      HOST_DOMINIO_1: ""
+      HOST_DOMINIO_2: ""
 
     volumes:
-    # Volumes needed if connecting to local qemu:///system
-      - "/var/run/libvirt/libvirt-sock:/var/run/libvirt/libvirt-sock"
-      - "/var/lib/libvirt/images:/var/lib/libvirt/images"
-
-    # If connecting to remote libvirtd, substitute location of ssh private key, e.g.:
-      # - /home/user/.ssh/id_rsa:/root/.ssh/id_rsa:ro
-    devices:
-    # Not needed if connecting to remote libvirtd
-      - "/dev/kvm:/dev/kvm"
+      - keys/chave.pem:/root/.ssh/chave.pem:ro
