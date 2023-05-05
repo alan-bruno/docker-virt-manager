@@ -9,8 +9,6 @@ sed -i 's/$HOST_DOMINIO_2/'$HOST_DOMINIO_2'/' /etc/krb5.conf
 dbus-launch gsettings set org.virt-manager.virt-manager.connections uris "$HOSTS"
 dbus-launch gsettings set org.virt-manager.virt-manager.connections autoconnect "$HOSTS"
 dbus-launch gsettings set org.virt-manager.virt-manager xmleditor-enabled true
-tmux send-keys -t ttyd dbus-launch\ virt-manager\ --no-fork Enter
-trap 'exit 0' SIGTERM
 while true; 
 do 
 ps -C virt-manager > /dev/null
@@ -22,3 +20,4 @@ dbus-launch virt-manager --no-fork
 fi
 sleep 10; 
 done
+trap 'exit 0' SIGTERM
