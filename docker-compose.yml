@@ -14,4 +14,4 @@ services:
       HOST_DOMINIO_2: ""
 
     volumes:
-      - keys/chave.pem:/root/.ssh/chave.pem:ro
+      - ./keys/chave.pem:/root/.ssh/chave.pem:ro
