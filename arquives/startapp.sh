@@ -11,4 +11,14 @@ dbus-launch gsettings set org.virt-manager.virt-manager.connections autoconnect 
 dbus-launch gsettings set org.virt-manager.virt-manager xmleditor-enabled true
 tmux send-keys -t ttyd dbus-launch\ virt-manager\ --no-fork Enter
 trap 'exit 0' SIGTERM
-while true; do sleep 1; done
+while true; 
+do 
+ps -C virt-manager > /dev/null
+if [ $? = 0 ]
+then
+sleep 1
+else
+dbus-launch virt-manager --no-fork
+fi
+sleep 10; 
+done
