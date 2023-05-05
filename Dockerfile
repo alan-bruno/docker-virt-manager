@@ -17,4 +17,6 @@ COPY arquives/config /root/.ssh/config
 COPY arquives/startapp.sh /usr/local/bin/startapp
 COPY arquives/krb5.conf /etc/krb5.conf
 COPY arquives/default /etc/nginx/sites-available/default
+COPY arquives/default /etc/nginx/nginx.tmpl
+RUN  chmod +x /usr/local/bin/startapp
 CMD ["/usr/local/bin/startapp"]

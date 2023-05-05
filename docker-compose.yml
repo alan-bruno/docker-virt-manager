@@ -1,6 +1,7 @@
 services: 
-  container_name: virt-manager
+  
   virt-manager:
+    container_name: virt-manager
     image: docker-virt-manager
     restart: always
     ports:
