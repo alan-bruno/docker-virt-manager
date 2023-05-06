@@ -1,12 +1,22 @@
-services: 
-  
+version: '3'
+
+networks:
   virt-manager:
+    driver:
+      bridge
+
+services:  
+  virt-manager:
+    build:
+      dockerfile: ./DockerFile
+      context: .
     container_name: virt-manager
     image: docker-virt-manager
     restart: always
     ports:
       - 8185:80
-
+    networks:
+      - virt-manager
     environment:
       HOSTS: "[]"
       DOMINIO: ""
