@@ -8,9 +8,6 @@ ENV DOMINIO=""
 ENV HOST_DOMINIO_1=""
 ENV HOST_DOMINIO_2=""
 
-RUN apt-get update
-RUN apt-get install -y --no-install-recommends virt-manager dbus-x11 libglib2.0-bin gir1.2-spiceclientgtk-3.0 ssh at-spi2-core libnginx-mod-http-auth-pam msktutil heimdal-clients libpam-heimdal 
-RUN apt-get remove tmux -y && apt-get clean && apt-get autoclean && rm -rf /var/lib/apt/lists/*
 RUN mkdir -p /root/.ssh
 RUN echo "auth required pam_krb5.so \n\taccount required pam_krb5.so\n" >> /etc/pam.d/nginx
 COPY files/config /root/.ssh/config
