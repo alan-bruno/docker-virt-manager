@@ -50,20 +50,25 @@ services:
       HOST_DOMINIO_1: ""
       # If you have more than one, please enter below.
       HOST_DOMINIO_2: ""
-      # OBS: If you have more than two domain controllers, modify the krb5.conf file, inside the "files" folder
+      # OBS: If you have more than two domain controllers, 
+      # modify the krb5.conf file, inside the "files" folder
       
     volumes:
       - ./keys/chave.pem:/root/.ssh/chave.pem:ro
 ```
 ## If you are not going to use authentication via Active Directory, modify the Dockerfile file, leaving it as below
+
 <img width="114" alt="" src="https://uploaddeimagens.com.br/imagens/HsvfRx4">
+
 ### How to create a common user
- ```bash
+
+```bash
     htpasswd -c /etc/nginx/.htpasswd user
     # To create additional user accounts, use the following command.
     htpasswd /etc/nginx/.htpasswd user
 ```
 ## Building from Dockerfile
+
 ```bash
     git clone https://github.com/m-bers/docker-virt-manager.git
     cd docker-virt-manager
