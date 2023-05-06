@@ -58,7 +58,7 @@ services:
 ```
 ## If you are not going to use authentication via Active Directory, modify the Dockerfile file, leaving it as below
 
-<img width="114" alt="" src="https://uploaddeimagens.com.br/imagens/HsvfRx4">
+![Docker virt-manager](virt-basic.png)
 
 ### How to create a common user
 
