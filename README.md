@@ -1,4 +1,4 @@
-# Docker virt-manager - Authentication via Active Directory
+# Docker virt-manager - Authentication via Active Directory or Authentication basic
 ### Obs¹: Connection private key connection only
 ### Obs²: If you want to connect using a password, follow the version with this setting enabled: [@m-bers](https://github.com/m-bers/docker-virt-manager)
 
