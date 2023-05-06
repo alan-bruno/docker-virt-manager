@@ -1,7 +1,7 @@
 # Docker virt-manager - Authentication via Active Directory
-### Connection private key connection only
-### 
-### GTK Broadway web UI for libvirt
+### Obs¹: Connection private key connection only
+### Obs2: If you want to connect using a password, follow the version with this setting enabled: (thanks to [@m-bers](https://github.com/m-bers/docker-virt-manager)
+## GTK Broadway web UI for libvirt
 ![Docker virt-manager](img/1.png)
 ![Docker virt-manager](img/2.png)
 
