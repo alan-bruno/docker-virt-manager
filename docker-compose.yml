@@ -12,9 +12,7 @@ networks:
 
 services:  
   virt-manager:
-    build:
-      dockerfile: ./DockerFile
-      context: .
+    build: .
     container_name: virt-manager
     image: docker-virt-manager
     restart: always
