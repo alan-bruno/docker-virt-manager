@@ -2,8 +2,7 @@ version: '3'
 
 networks:
   virt-manager:
-    driver:
-      bridge
+    name: virt-manager
     driver: bridge
     ipam:
         driver: default
