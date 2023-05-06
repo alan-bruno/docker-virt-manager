@@ -1,10 +1,13 @@
+[![](https://github.com/m-bers/docker-virt-manager/workflows/docker%20build/badge.svg)](https://github.com/alan-bruno/docker-virt-manager)[![](https://img.shields.io/docker/pulls/mber5/virt-manager)](https://hub.docker.com/r/alanbruno/virt-manager-login)
+
 # Docker virt-manager - Authentication via Active Directory or Authentication basic
 ### Obs¹: Connection private key connection only
 ### Obs²: If you want to connect using a password, follow the version with this setting enabled: [@m-bers](https://github.com/m-bers/docker-virt-manager)
 
 ## GTK Broadway web UI for libvirt
-![Docker virt-manager](img/1.png)
-![Docker virt-manager](img/2.png)
+
+![1.png](https://i.postimg.cc/wxkKRKHf/1.png)
+![2.png](https://i.postimg.cc/zvxPtrGq/2.png)
 
 ## What is it? 
 virt-manager: https://virt-manager.org/  
@@ -66,7 +69,7 @@ services:
 ```
 ## If you are not going to use authentication via Active Directory, modify the Dockerfile file, leaving it as below
 
-![Docker virt-manager](img/virt-basic.png)
+![virt-basic.png](https://i.postimg.cc/d1t2WTkT/virt-basic.png)]
 
 ### How to create a common user
 
