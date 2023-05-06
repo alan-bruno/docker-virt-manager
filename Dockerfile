@@ -13,14 +13,14 @@ RUN apt-get install -y --no-install-recommends virt-manager dbus-x11 libglib2.0-
 RUN apt-get remove tmux -y && apt-get clean && apt-get autoclean && rm -rf /var/lib/apt/lists/*
 RUN mkdir -p /root/.ssh
 RUN echo "auth required pam_krb5.so \n\taccount required pam_krb5.so\n" >> /etc/pam.d/nginx
-COPY arquives/config /root/.ssh/config
-COPY arquives/startapp.sh /usr/local/bin/startapp
-COPY arquives/krb5.conf /etc/krb5.conf
+COPY files/config /root/.ssh/config
+COPY files/startapp.sh /usr/local/bin/startapp
+COPY files/krb5.conf /etc/krb5.conf
 #Authentication via Active Directory
-COPY arquives/default_AD /etc/nginx/sites-available/default
-COPY arquives/default_AD /etc/nginx/nginx.tmpl
+COPY files/default_AD /etc/nginx/sites-available/default
+COPY files/default_AD /etc/nginx/nginx.tmpl
 #Authentication via Usuário common
-#COPY arquives/default_US /etc/nginx/sites-available/default
-#COPY arquives/default_US /etc/nginx/nginx.tmpl
+#COPY files/default_US /etc/nginx/sites-available/default
+#COPY files/default_US /etc/nginx/nginx.tmpl
 RUN  chmod +x /usr/local/bin/startapp
 CMD ["/usr/local/bin/startapp"]
