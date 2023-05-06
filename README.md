@@ -1,7 +1,9 @@
 # Docker virt-manager - Authentication via Active Directory
-## Connection private key connection only
+### Connection private key connection only
+### 
 ### GTK Broadway web UI for libvirt
-![Docker virt-manager](docker-virt-manager.gif)
+![Docker virt-manager](img/1.png)
+![Docker virt-manager](img/2.png)
 
 ## What is it? 
 virt-manager: https://virt-manager.org/  
@@ -58,7 +60,7 @@ services:
 ```
 ## If you are not going to use authentication via Active Directory, modify the Dockerfile file, leaving it as below
 
-![Docker virt-manager](virt-basic.png)
+![Docker virt-manager](img/virt-basic.png)
 
 ### How to create a common user
 
@@ -70,8 +72,8 @@ services:
 ## Building from Dockerfile
 
 ```bash
-    git clone https://github.com/m-bers/docker-virt-manager.git
+    git clone https://github.com/alan-bruno/docker-virt-manager.git
     cd docker-virt-manager
-    docker build -t docker-virt-manager . && docker-compose up -d
+    docker-compose up -d
 ```
 Go to http://localhost:8185 in your browser
