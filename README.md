@@ -82,7 +82,8 @@ services:
 
 ```bash
     git clone https://github.com/alan-bruno/docker-virt-manager.git
-    cd docker-virt-manager
+    cd docker-virt-manager && chmod 600 keys/chave.pem
+    # Remember to put the private access key to the servers keys/chave.pem
     docker-compose up -d --build
 ```
 
