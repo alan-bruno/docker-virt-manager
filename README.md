@@ -80,7 +80,7 @@ services:
 ```bash
     git clone https://github.com/alan-bruno/docker-virt-manager.git
     cd docker-virt-manager
-    docker-compose up -d
+    docker-compose up -d --build
 ```
 
 ### Access
