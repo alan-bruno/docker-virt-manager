@@ -1,6 +1,7 @@
 # Docker virt-manager - Authentication via Active Directory
 ### Obs¹: Connection private key connection only
-### Obs2: If you want to connect using a password, follow the version with this setting enabled: (thanks to [@m-bers](https://github.com/m-bers/docker-virt-manager)
+### Obs²: If you want to connect using a password, follow the version with this setting enabled: [@m-bers](https://github.com/m-bers/docker-virt-manager)
+
 ## GTK Broadway web UI for libvirt
 ![Docker virt-manager](img/1.png)
 ![Docker virt-manager](img/2.png)
@@ -29,6 +30,11 @@ networks:
   virt-manager:
     driver:
       bridge
+    driver: bridge
+    ipam:
+        driver: default
+        config:
+            - subnet: "172.1.0.0/16"
 
 services:  
   virt-manager:
@@ -76,4 +82,13 @@ services:
     cd docker-virt-manager
     docker-compose up -d
 ```
+
+### Access
+
 Go to http://localhost:8185 in your browser
+
+
+
+
+
+* Thanks to [@m-bers](https://github.com/m-bers/docker-virt-manager) for the idea!

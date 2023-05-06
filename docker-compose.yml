@@ -4,6 +4,11 @@ networks:
   virt-manager:
     driver:
       bridge
+    driver: bridge
+    ipam:
+        driver: default
+        config:
+            - subnet: "172.1.0.0/16"
 
 services:  
   virt-manager:
